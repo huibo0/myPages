@@ -1,6 +1,6 @@
+*.DS_Store
 /node_modules
-/public/hot
-/public/storage
+/storage
 /storage/*.key
 /vendor
 /.idea
@@ -8,5 +8,12 @@
 Homestead.json
 Homestead.yaml
 npm-debug.log
-yarn-error.log
 .env
+.idea
+/www/node_modules
+/www/dist
+/www_new/node_modules
+Envoy.blade.php
+/public/storage
+
+
