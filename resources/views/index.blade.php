@@ -43,6 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- js -->
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 
     <!-- js -->
 
@@ -574,11 +575,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <form>
 
-                <input type="text" class="text" value="Name" onFocus="this.value = '惠博';" onBlur="if (this.value == '') {this.value = '新的';}">
+                <input type="text"   class="text name" value="Name" onFocus="this.value = '惠博';" onBlur="if (this.value == '') {this.value = '新的';}">
 
-                <input type="text" class="text" value="Email" onFocus="this.value = 'huibo@ihuibo.cn';" onBlur="if (this.value == '') {this.value = 'Email';}">
+                <input type="text" class="text email" value="Email" onFocus="this.value = 'huibo@ihuibo.cn';" onBlur="if (this.value == '') {this.value = 'Email';}">
 
-                <textarea value="Message" onFocus="this.value= '欢迎您联系我';" onBlur="if (this.value == '欢迎您联系我') {this.value = 'Message';}">Message</textarea>
+                <textarea value="Message" class="message" onFocus="this.value= '欢迎您联系我';" onBlur="if (this.value == '欢迎您联系我') {this.value = 'Message';}">Message</textarea>
 
                 <input type="submit" value="Send Message" onclick="imessage()">
 
@@ -608,8 +609,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
     <script type="text/javascript">
+
+        var token = "{{csrf_token()}}";
+        var _method = "POST";
         function imessage() {
-            alert("提交成功");
+           $.ajax({
+               type : 'POST',
+               url : 'messages',
+               data: {
+                   _token : token,
+                   _method : _method
+               },
+               success: function (data) {
+                 console.log(1);
+               }
+
+           });
+//            alert("提交成功");
 
         }
 

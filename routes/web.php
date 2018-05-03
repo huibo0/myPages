@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/project', function () {
     return view('index');
 });
+
+//信息
+Route::resource('messages', 'MessageController');
