@@ -575,11 +575,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <form>
 
-                <input type="text"   class="text name"  >
+                <input type="text"  name="name" class="text name"  >
 
-                <input type="text" class="text email"  >
+                <input type="text" name="email" class="text email"  >
 
-                <textarea  class="message" onFocus="this.value= '欢迎您联系我';" ></textarea>
+                <textarea  class="message" name="message" onFocus="this.value= '欢迎您联系我';" ></textarea>
 
                 <input type="submit" value="Send Message" onclick="imessage()">
 
@@ -613,6 +613,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         var token = "{{csrf_token()}}";
         var _method = "POST";
         var name = $(".name").val();
+        alert(name);
         var email = $(".email").val();
         var message = $(".message").val();
         function imessage() {
