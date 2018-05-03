@@ -579,7 +579,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <input type="text" class="text email"  onFocus="this.value = 'huibo@ihuibo.cn';" >
 
-                <textarea  class="message" onFocus="this.value= '欢迎您联系我';" ></textarea>
+                <textarea  class="message" placeholder="欢迎您联系我"  ></textarea>
 
                 <input type="submit" value="Send Message" class="imessage" >
 
