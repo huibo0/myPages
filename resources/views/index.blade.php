@@ -575,11 +575,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-                <input type="text"   class="text name"  onFocus="this.value = '惠博';" onBlur="if (this.value == '') {this.value = '新的';}">
+                <input type="text"   class="text name"  onFocus="this.value = '惠博';" >
 
-                <input type="text" class="text email"  onFocus="this.value = 'huibo@ihuibo.cn';" onBlur="if (this.value == '') {this.value = 'Email';}">
+                <input type="text" class="text email"  onFocus="this.value = 'huibo@ihuibo.cn';" >
 
-                <textarea  class="message" onFocus="this.value= '欢迎您联系我';" onBlur="if (this.value == '欢迎您联系我') {this.value = 'Message';}"></textarea>
+                <textarea  class="message" onFocus="this.value= '欢迎您联系我';" ></textarea>
 
                 <input type="submit" value="Send Message" class="imessage" >
 
