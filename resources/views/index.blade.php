@@ -612,13 +612,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         var token = "{{csrf_token()}}";
         var _method = "POST";
+        var name = $(".name").val();
+        var email = $(".email").val();
+        var message = $(".message").val();
         function imessage() {
            $.ajax({
                type : 'POST',
                url : 'messages',
                data: {
                    _token : token,
-                   _method : _method
+                   _method : _method,
+                   name : name,
+                   email : email,
+                   message : message
                },
                success: function (data) {
                    alert(data);
