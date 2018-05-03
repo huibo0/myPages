@@ -573,7 +573,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <h3>Say hello!</h3>
 
-            <form>
+
 
                 <input type="text"   class="text name"  onFocus="this.value = '惠博';" onBlur="if (this.value == '') {this.value = '新的';}">
 
@@ -583,7 +583,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 <input type="submit" value="Send Message" class="imessage" >
 
-            </form>
+
 
         </div>
 
