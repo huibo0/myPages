@@ -575,13 +575,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <form>
 
-                <input type="text"  name="name" class="text name"  >
+                <input type="text"   class="text name"  onFocus="this.value = '惠博';" onBlur="if (this.value == '') {this.value = '新的';}">
 
-                <input type="text" name="email" class="text email"  >
+                <input type="text" class="text email"  onFocus="this.value = 'huibo@ihuibo.cn';" onBlur="if (this.value == '') {this.value = 'Email';}">
 
-                <textarea  class="message" name="message" onFocus="this.value= '欢迎您联系我';" ></textarea>
+                <textarea  class="message" onFocus="this.value= '欢迎您联系我';" onBlur="if (this.value == '欢迎您联系我') {this.value = 'Message';}">Message</textarea>
 
-                <input type="submit" value="Send Message" onclick="imessage()">
+                <input type="submit" value="Send Message" class="imessage" >
 
             </form>
 
@@ -610,32 +610,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <script type="text/javascript">
 
-        var token = "{{csrf_token()}}";
-        var _method = "POST";
-        var name = $(".name").val();
-        alert(name);
-        var email = $(".email").val();
-        var message = $(".message").val();
-        function imessage() {
-           $.ajax({
-               type : 'POST',
-               url : 'messages',
-               data: {
-                   _token : token,
-                   _method : _method,
-                   name : name,
-                   email : email,
-                   message : message
-               },
-               success: function (data) {
-                   alert(data);
-                 console.log(1);
-               }
+        $(".imessage").click(function () {
+            var token = "{{csrf_token()}}";
+            var _method = "POST";
+            var name = $(".name").val();
+            var email = $(".email").val();
+            var message = $(".message").val();
+                $.ajax({
+                    type : 'POST',
+                    url : 'messages',
+                    data: {
+                        _token : token,
+                        _method : _method,
+                        name : name,
+                        email : email,
+                        message : message
+                    },
+                    success: function (data) {
+                        alert(data);
+                        console.log(1);
+                    }
+                });
+        });
 
-           });
+
 //            alert("提交成功");
 
-        }
+
 
         $(document).ready(function() {
 
