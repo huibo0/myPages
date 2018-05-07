@@ -43,7 +43,7 @@ class MessageController extends Controller
             }
 
         } catch (\Exception $exception) {
-            dd($exception->getPrevious());
+            dd($exception->getTrace());
             die('出现错误');
         }
     }
