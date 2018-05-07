@@ -19,5 +19,9 @@ Route::get('/project', function () {
     return view('index');
 });
 
+Route::get('/email', function () {
+    return view('email');
+});
+
 //信息
 Route::resource('messages', 'MessageController');
