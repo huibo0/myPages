@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Handlers\sendEmailHandler;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -33,12 +34,16 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,sendEmailHandler $emailHandler)
     {
         try {
-            dd($request);
             $res = Message::create($request->all());
+            if ($res){
+                $emailHandler->send($request->name,$request->email,$request->message);
+            }
+
         } catch (\Exception $exception) {
+            dd($exception);
             die('出现错误');
         }
     }
