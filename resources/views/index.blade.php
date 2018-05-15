@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                             <li><a class="scroll" href="#Portfolio">项目展示</a></li>
 
-                            <li><a href="project6.php">关于本站</a></li>
+                            <li><a href="{{ route('pages',6) }}">关于本站</a></li>
 
                             <li><a class="scroll" href="#Contact">联系我</a></li>
 
@@ -371,7 +371,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids ">
 
-                <a class="b-link-stripe b-animate-go" href="project.php" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',1 ) }}" target="_blank">
 
                     <img src="{{ asset('images/lami.png') }}" class="img-responsive" alt="">
 
@@ -391,7 +391,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids">
 
-                <a class="b-link-stripe b-animate-go" href="project2.php" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',2) }}" target="_blank">
 
                     <img src="{{ asset('images/img1.png') }}" class="img-responsive" alt="">
 
@@ -411,7 +411,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids">
 
-                <a class="b-link-stripe b-animate-go" href="project3.php" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',3) }}" target="_blank">
 
                     <img src="{{ asset('images/wangwu.png') }}" class="img-responsive" alt="">
 
@@ -431,7 +431,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids">
 
-                <a class="b-link-stripe b-animate-go" href="project4.php" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',4) }}" target="_blank">
 
                     <img src="{{ asset('images/100haofang.png') }}" class="img-responsive" alt="">
 
@@ -471,7 +471,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids">
 
-                <a class="b-link-stripe b-animate-go" href="project6.php" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',6) }}" target="_blank">
 
                     <img src="{{ asset('images/ihuibo.png') }}" class="img-responsive" alt="">
 
@@ -479,7 +479,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							<span class="b-animate b-from-left    b-delay03 ">
 
-								<img class="img-responsive" src="images/e.png" alt=""/>
+								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
 
 							</span>
 

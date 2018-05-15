@@ -15,11 +15,35 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/project', function () {
+Route::get('project', function () {
     return view('index');
-});
+})->name('project');
 
+
+Route::get('pages/{id}',function ($id){
+    switch ($id){
+        case 1:
+            return view('projects.project');
+            break;
+        case 2:
+            return view('projects.project2');
+            break;
+        case 3:
+            return view('projects.project3');
+            break;
+        case 4:
+            return view('projects.project4');
+            break;
+        case 5:
+            return view('projects.project5');
+            break;
+        case 6:
+            return view('projects.project6');
+            break;
+    }
+})->name('pages');
 
 
 //信息
 Route::resource('messages', 'MessageController');
+
