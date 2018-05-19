@@ -11,9 +11,9 @@
                     <div class="section-inner">
                         <h2 class="heading">About Project</h2>
                         <div class="content">
-                            <p>这个项目的整体框架使用了laravel，开发环境为linux+mysql+php,项目当中使用的技术包括html+css+js+php+ajax，项目采用mvc架构，逻辑非常清晰，本项目当中我们使用了码云平台，利用git技术来进行团队合作开发。</p>
+                            <p>这个项目的整体框架使用了laravel + vue来完成，环境为nginx+mysql+php,在该项目中我们将项目进行分层，分为了控制器层，服务层，和操作层，控制器层作为入口进入不同的服务层，服务层内包含各种方法进入不同的操作层，基本上做到了层级分明，代码不混乱的尝试。</p>
          
-        <p> 该项目为企业官方网站，分为前台和后台管理两部分，该网站数据基本全部从后台通过数据库取出，包括轮涡图、三级菜单、合作伙伴、可承接业务等，后台实现模块的增删改查，全局搜索，上传等功能，关于功能实现部分会在下文当中进行一部分详细介绍。</p>
+        <p> 该项目需要实现的功能包括，创建基础学员班级模板信息，基础配置信息，用户信息，课程分为小班课，学前班，幼儿园，还有竞赛这四种，主要模块包括，学员管理，用户管理，班级管理，教师管理，校区管理，优惠管理，竞赛管理，代收费管理，财务管理，基础配置，权限设置等部分，开发周期较长，我是中途加入，参与开发了幼儿园，和学前班模块。</p>
                          
                         </div><!--//content-->
                     </div><!--//section-inner-->                 
@@ -25,11 +25,11 @@
                         <div class="content">    
                                                
                             <div class="item featured text-center">
-                                <h3 class="title"><a href="http://360.lami360.com" target="_blank">企业网站开发</a></h3>
-                                <p class="summary">基于艺术框架的实用型项目</p>
+                                <h3 class="title"><a href="http://bete701.youcaiedu.com/" target="_blank">优才教育平台开发(该项目地址为测试地址)</a></h3>
+                                <p class="summary">基于laravel的教育类项目</p>
                                 <div class="featured-image">
-                                    <a href="http://360.lami360.com" target="_blank">
-                                    <img class="img-responsive project-image" src="{{ asset('images/lami1.png') }}" alt="project name" />
+                                    <a href="http://bete701.youcaiedu.com/" target="_blank">
+                                    <img class="img-responsive project-image" src="{{ asset('images/youcai.jpeg') }}" alt="project name" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
@@ -37,12 +37,13 @@
                                     </div>
                                     
                                 <div class="desc text-left">
-                                    <p>本项目前台部分使用了ajax以及php从数据库以及其他部分接收数据并展示页面，在设计网站整体功能架构的时候，设计了四个表来存储数据，包括，三级菜单，案例，客户和资讯，案例表利用了多表联合查询可以根据代码来控制从而出现在不同的标签下。</p>
-                                    <p>在该项目当中我负责参与设计网站整体架构部分，建立数据库，完成部分前台编写，在后台部分，完成增删改查部分，以及参与阿里云的oss上传功能编写，该网站后台可以实现阿里云上传以及服务器端的本地上传。</p>
+                                    <p>本项目采用了接口式开发，前端使用vue，后端使用laravel,代码均放在公司自己搭建的gitlab上，该项目相对较大，涉及到的东西也很多，采用了层级分离的方式以后，对我们的开发起到了很大的作用。</p>
+                                    <p>该项目由于分类众多，使用了大概300张数据表来实现后台逻辑存储，在这个项目当中我学到了包括表格，短信，passport，依赖注入，模型观测者等相关知识，软知识方面包括，在开发某一功能前，一定要和产品进行沟通，
+                                    彻底理解客户的需求，按照需求开发项目，对于rp不合理的地方也要及时提出，不然可能推挤很多问题，导致后期很难修改。</p>
                                 </div><!--//desc-->
-                                <img class="img-responsive project-image" src="{{ asset('images/lamitest.png') }}" alt="project name" />
+                                <img class="img-responsive project-image" src="{{ asset('images/youcai1.jpeg') }}" alt="project name" />
 
-                                <a class="btn btn-cta-secondary" href="http://360.lami360.com" target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
+                                <a class="btn btn-cta-secondary" href="http://bete701.youcaiedu.com/" target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
                             </div><!--//item-->
 
                             
@@ -96,7 +97,7 @@
                                 <h3 class="title">软件工程师 - <span class="place"><a href="#">杭州燊蓝科技有限公司</a></span> <span class="year">(2017.3 - 2018.5)</span></h3>
                                 <p>
                                     该公司因深蓝阅读而出名，很荣幸可以加入他们，在该公司，我接触了包括餐饮类项目（尚可味），教育类项目（优才教育），拍卖类项目（虎拍），这三个项目均是使用laravel框架完成，开发方式除了虎拍 后台是我独立完成以外，其他均是前后端配合，用接口式的方式来完成。
-                                    主要接触开发了包括 支付，passport认证，crontab命令，邮件，短信，授权登录，监听事件，队列，权限等各方面内容，认识到了一个项目从开发到完成前期规划和准备具有很关键的作用，是否真正理解了某些功能是开发出这些功能的基准。
+                                    主要接触开发了包括 支付，passport认证，crontab命令，邮件，短信，授权登录，队列，权限等各方面内容，认识到了一个项目从开发到完成前期规划和准备具有很关键的作用，是否真正理解了某些功能是开发出这些功能的基准。
 
                                 </p>
                             </div><!--//item-->

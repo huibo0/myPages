@@ -451,9 +451,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="col-md-4 galry-grids">
 
-                <a class="b-link-stripe b-animate-go" href="#" target="_blank">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',7) }}" target="_blank">
 
-                    <img src="{{ asset('images/img13.jpg') }}" class="img-responsive" alt="">
+                    <img src="{{ asset('images/youcai.jpeg') }}" style="width: 376px;height:  282px" class="img-responsive" alt="">
 
                     <div class="b-wrapper">
 
@@ -489,11 +489,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             </div>
 
-            <div class="col-md-4 galry-grids moments-bottom">
+            <div class="col-md-4 galry-grids ">
 
-                <a class="b-link-stripe b-animate-go" href="{{ asset('images/img15.jpg') }}">
+                <a class="b-link-stripe b-animate-go" href="{{ route('pages',8) }}" target="_blank">
 
-                    <img src="{{ asset('images/img15.jpg') }}" class="img-responsive" alt="">
+                    <img src="{{ asset('images/hupai.png') }}"  style="width: 376px;height: 282px" class="img-responsive" alt="">
 
                     <div class="b-wrapper">
 

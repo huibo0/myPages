@@ -40,6 +40,17 @@ Route::get('pages/{id}',function ($id){
         case 6:
             return view('projects.project6');
             break;
+        case 7:
+            return view('projects.project7');
+            break;
+        case 8:
+            return view('projects.project8');
+            break;
+        case 9:
+            return view('projects.project9');
+            break;
+
+
     }
 })->name('pages');
 

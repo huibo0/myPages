@@ -11,9 +11,11 @@
                     <div class="section-inner">
                         <h2 class="heading">About Project</h2>
                         <div class="content">
-                            <p>这个项目的整体框架使用了laravel，开发环境为linux+mysql+php,项目当中使用的技术包括html+css+js+php+ajax，项目采用mvc架构，逻辑非常清晰，本项目当中我们使用了码云平台，利用git技术来进行团队合作开发。</p>
+                            <p>该项目主要为app端，该项目主要的功能是实现从日本雅虎拍卖抓取到商品信息，然后来模拟雅虎买家进行出价，实现在国内，便可以进行拍卖海外商品的平台，类似的平台有洋觅网。</p>
          
-        <p> 该项目为企业官方网站，分为前台和后台管理两部分，该网站数据基本全部从后台通过数据库取出，包括轮涡图、三级菜单、合作伙伴、可承接业务等，后台实现模块的增删改查，全局搜索，上传等功能，关于功能实现部分会在下文当中进行一部分详细介绍。</p>
+        <p> 该项目的主要技术难点包括商品的抓取，商品的出价，商品的中标，倒计时同步问题，以及可能存在的未知页面报错信息，抓取的方式为模拟浏览器进行操作，该项目包含的主要技术点为，querylist采集工具的使用，短信通知，支付宝微信支付，对接物流平台，对接翻译平台
+        拍品的热度算法，如何维持cookie不过期等，算是一次新鲜的尝试，该app现已在安卓上架，ios正在审核，我手机安装了测试版。
+        </p>
                          
                         </div><!--//content-->
                     </div><!--//section-inner-->                 
@@ -25,11 +27,11 @@
                         <div class="content">    
                                                
                             <div class="item featured text-center">
-                                <h3 class="title"><a href="http://360.lami360.com" target="_blank">企业网站开发</a></h3>
-                                <p class="summary">基于艺术框架的实用型项目</p>
+                                <h3 class="title"><a href="http://hupai.dodao.net/" target="_blank">虎拍拍卖(下载链接后期会更新在该网页上)</a></h3>
+                                <p class="summary">基于日本雅虎的拍卖项目(下载链接后期会更新在该网页上)</p>
                                 <div class="featured-image">
-                                    <a href="http://360.lami360.com" target="_blank">
-                                    <img class="img-responsive project-image" src="{{ asset('images/lami1.png') }}" alt="project name" />
+                                    <a href="http://hupai.dodao.net/" target="_blank">
+                                    <img class="img-responsive project-image" src="{{ asset('images/hupai1.jpeg') }}" alt="project name" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
@@ -37,12 +39,12 @@
                                     </div>
                                     
                                 <div class="desc text-left">
-                                    <p>本项目前台部分使用了ajax以及php从数据库以及其他部分接收数据并展示页面，在设计网站整体功能架构的时候，设计了四个表来存储数据，包括，三级菜单，案例，客户和资讯，案例表利用了多表联合查询可以根据代码来控制从而出现在不同的标签下。</p>
-                                    <p>在该项目当中我负责参与设计网站整体架构部分，建立数据库，完成部分前台编写，在后台部分，完成增删改查部分，以及参与阿里云的oss上传功能编写，该网站后台可以实现阿里云上传以及服务器端的本地上传。</p>
+                                    <p>本项目主要分为ios端，安卓端，小程序端，后端则使用php，代码均放在公司自己搭建的gitlab上，该项目后台的开发全部有我来完成，采取的方式为，blade模板+jquery+bootstrap 来搭建后台页面，学习到了很多的前端知识，app端则采用接口式开发和ios以及安卓配合完成。</p>
+                                    <p>该项目最难的方面是保证抓取商品，出价不出现问题，由于虎拍那边做了限制，经常会封ip，我们这边也相应的改了很多次代码的抓取频率。</p>
                                 </div><!--//desc-->
-                                <img class="img-responsive project-image" src="{{ asset('images/lamitest.png') }}" alt="project name" />
+                                <img class="img-responsive project-image" src="{{ asset('images/hupai2.jpeg') }}" alt="project name" />
 
-                                <a class="btn btn-cta-secondary" href="http://360.lami360.com" target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
+                                <a class="btn btn-cta-secondary" href="http://hupai.dodao.net/" target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
                             </div><!--//item-->
 
                             
@@ -96,7 +98,7 @@
                                 <h3 class="title">软件工程师 - <span class="place"><a href="#">杭州燊蓝科技有限公司</a></span> <span class="year">(2017.3 - 2018.5)</span></h3>
                                 <p>
                                     该公司因深蓝阅读而出名，很荣幸可以加入他们，在该公司，我接触了包括餐饮类项目（尚可味），教育类项目（优才教育），拍卖类项目（虎拍），这三个项目均是使用laravel框架完成，开发方式除了虎拍 后台是我独立完成以外，其他均是前后端配合，用接口式的方式来完成。
-                                    主要接触开发了包括 支付，passport认证，crontab命令，邮件，短信，授权登录，监听事件，队列，权限等各方面内容，认识到了一个项目从开发到完成前期规划和准备具有很关键的作用，是否真正理解了某些功能是开发出这些功能的基准。
+                                    主要接触开发了包括 支付，passport认证，crontab命令，邮件，短信，授权登录，队列，权限等各方面内容，认识到了一个项目从开发到完成前期规划和准备具有很关键的作用，是否真正理解了某些功能是开发出这些功能的基准。
 
                                 </p>
                             </div><!--//item-->
