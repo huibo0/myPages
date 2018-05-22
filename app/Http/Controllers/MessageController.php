@@ -38,12 +38,13 @@ class MessageController extends Controller
     {
         try {
             $res = Message::create($request->all());
-            if ($res){
-                $emailHandler->send($request->name,$request->email,$request->message);
-            }
+//            if ($res){
+//                $emailHandler->send($request->name,$request->email,$request->message);
+//            }
+            return '成功';
 
         } catch (\Exception $exception) {
-            dd($exception->getTrace());
+            dd($exception);
             die('出现错误');
         }
     }
