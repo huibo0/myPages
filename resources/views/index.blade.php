@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
             <div class="header-btn">
 
-                <a href="#">管理</a>
+                <a href="http://envelope.ihuibo.cn/" style="color: white">论坛</a>
 
             </div>
 
@@ -136,6 +136,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li><a href="{{ route('pages',6) }}">关于本站</a></li>
 
                             <li><a class="scroll" href="#Contact">联系我</a></li>
+
+                            <li><a  href="http://envelope.ihuibo.cn/" style="color: orange" target="_blank">论坛</a></li>
 
                         </ul>
 
