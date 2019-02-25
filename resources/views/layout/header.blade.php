@@ -14,9 +14,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}" media="screen"/>
 
-    <meta name="keywords" content="Alice Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <meta name="keywords" content="ihuibo.cn, 惠博的简历, 惠博, huibo" />
 
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 

@@ -257,7 +257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     </div>
 
-                    <h4>Php</h4><h4>
+                    <h4>Php</h4>
 
                         <div class="progress">
 
@@ -268,8 +268,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
 
                         </div>
+                    <h4>Python</h4>
 
-                    </h4>
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+
+                            <span class="sr-only">50% Complete (danger)</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -309,13 +318,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </a>
 
-        <a href="tel:18369620560">
+        <a href="https://github.com/huibo0">
 
             <div class="youtube">
 
                 <span class="icon3"> </span>
 
-                <label><i>github</i> <br />callme</label>
+                <label><i>github</i> <br />GitHub</label>
 
             </div>
 
@@ -370,33 +379,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h3>项目展示</h3>
 
         <div class="gallery-info">
+            @foreach($article as $value)
+                <div class="col-md-4 galry-grids " style="margin-top: 10px">
 
-            <div class="col-md-4 galry-grids ">
+                    <a class="b-link-stripe b-animate-go" href="{{ route('pages',$value->id ) }}" target="_blank">
 
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',1 ) }}" target="_blank">
+                        <img src="{{ $value->image }}" style="width: 376px;height: 282px" class="img-responsive" alt="">
 
-                    <img src="{{ asset('images/lami.png') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-            <div class="col-md-4 galry-grids ">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',8) }}" target="_blank">
-
-                    <img src="{{ asset('images/hupai.png') }}"  style="width: 376px;height: 282px" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
+                        <div class="b-wrapper" >
 
 							<span class="b-animate b-from-left    b-delay03 ">
 
@@ -404,155 +394,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							</span>
 
-                    </div>
+                        </div>
 
-                </a>
+                    </a>
 
-            </div>
-
-
-
-
-            <div class="col-md-4 galry-grids">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',7) }}" target="_blank">
-
-                    <img src="{{ asset('images/youcai.jpeg') }}" style="width: 376px;height:  282px" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-
-            <div class="col-md-4 galry-grids">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',4) }}" target="_blank">
-
-                    <img src="{{ asset('images/100haofang.png') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-4 galry-grids">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',3) }}" target="_blank">
-
-                    <img src="{{ asset('images/wangwu.png') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-4 galry-grids">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',6) }}" target="_blank">
-
-                    <img src="{{ asset('images/ihuibo.png') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-4 galry-grids">
-
-                <a class="b-link-stripe b-animate-go" href="{{ route('pages',2) }}" target="_blank">
-
-                    <img src="{{ asset('images/img1.png') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-4 galry-grids moments-bottom">
-
-                <a class="b-link-stripe b-animate-go" href="{{ asset('images/img16.jpg') }}">
-
-                    <img src="{{ asset('images/img16.jpg') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="col-md-4 galry-grids moments-bottom">
-
-                <a class="b-link-stripe b-animate-go" href="{{ asset('images/img17.jpg') }}" >
-
-                    <img src="{{ asset('images/img17.jpg') }}" class="img-responsive" alt="">
-
-                    <div class="b-wrapper">
-
-							<span class="b-animate b-from-left    b-delay03 ">
-
-								<img class="img-responsive" src="{{ asset('images/e.png') }}" alt=""/>
-
-							</span>
-
-                    </div>
-
-                </a>
-
-            </div>
+                </div>
+            @endforeach
 
             <div class="clearfix"> </div>
 

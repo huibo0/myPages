@@ -11,80 +11,79 @@
                     <div class="section-inner">
                         <h2 class="heading">About Project</h2>
                         <div class="content">
-                            <p>这个项目的整体框架使用了laravel，开发环境为linux+mysql+php,项目当中使用的技术包括html+css+js+php+ajax，项目采用mvc架构，逻辑非常清晰，本项目当中我们使用了码云平台，利用git技术来进行团队合作开发。</p>
-         
-        <p> 该项目为企业官方网站，分为前台和后台管理两部分，该网站数据基本全部从后台通过数据库取出，包括轮涡图、三级菜单、合作伙伴、可承接业务等，后台实现模块的增删改查，全局搜索，上传等功能，关于功能实现部分会在下文当中进行一部分详细介绍。</p>
-                         
+                            <p>{!! $show->describe !!}</p>
+                            {{--<p>这个项目的整体框架使用了laravel，开发环境为linux+mysql+php,项目当中使用的技术包括html+css+js+php+ajax，项目采用mvc架构，逻辑非常清晰，本项目当中我们使用了码云平台，利用git技术来进行团队合作开发。</p>--}}
+
+        {{--<p> 该项目为企业官方网站，分为前台和后台管理两部分，该网站数据基本全部从后台通过数据库取出，包括轮涡图、三级菜单、合作伙伴、可承接业务等，后台实现模块的增删改查，全局搜索，上传等功能，关于功能实现部分会在下文当中进行一部分详细介绍。</p>--}}
+
                         </div><!--//content-->
-                    </div><!--//section-inner-->                 
+                    </div><!--//section-inner-->
                 </section><!--//section-->
-    
+
                <section class="latest section">
                     <div class="section-inner">
                         <h2 class="heading">Projects Introduction</h2>
-                        <div class="content">    
-                                               
+                        <div class="content">
+
                             <div class="item featured text-center">
-                                <h3 class="title"><a href="http://360.lami360.com" target="_blank">企业网站开发</a></h3>
+                                <h3 class="title"><a href="http://360.lami360.com" target="_blank">{{$show->title}}</a></h3>
                                 <p class="summary">基于艺术框架的实用型项目</p>
                                 <div class="featured-image">
                                     <a href="http://360.lami360.com" target="_blank">
-                                    <img class="img-responsive project-image" src="{{ asset('images/lami1.png') }}" alt="project name" />
+                                    <img class="img-responsive project-image" src="{{ $show->subImage_1 }}" alt="project name" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
                                         </div>
                                     </div>
-                                    
-                                <div class="desc text-left">
-                                    <p>本项目前台部分使用了ajax以及php从数据库以及其他部分接收数据并展示页面，在设计网站整体功能架构的时候，设计了四个表来存储数据，包括，三级菜单，案例，客户和资讯，案例表利用了多表联合查询可以根据代码来控制从而出现在不同的标签下。</p>
-                                    <p>在该项目当中我负责参与设计网站整体架构部分，建立数据库，完成部分前台编写，在后台部分，完成增删改查部分，以及参与阿里云的oss上传功能编写，该网站后台可以实现阿里云上传以及服务器端的本地上传。</p>
-                                </div><!--//desc-->
-                                <img class="img-responsive project-image" src="{{ asset('images/lamitest.png') }}" alt="project name" />
 
-                                <a class="btn btn-cta-secondary" href="http://360.lami360.com" target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
+                                <div class="desc text-left">
+                                    <p>{!! $show->content !!}</p>
+                                </div><!--//desc-->
+                                <img class="img-responsive project-image" src="{{ $show->subImage_2 }}" alt="project name" />
+
+                                <a class="btn btn-cta-secondary" href={{$show->url}} target="_blank"><i class="fa fa-thumbs-o-up"></i> 前往</a>
                             </div><!--//item-->
 
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </section><!--//section-->
 
-                
+
                 <section class="projects section">
                     <div class="section-inner">
                         <h2 class="heading">Other Projects</h2>
                         <div class="content">
+                            @foreach($list as $value)
+
                             <div class="item">
-                                <h3 class="title"><a href="{{ route('pages',2) }}">微推广平台</a></h3>
-                                <p class="summary">本项目我负责维护和增加新功能，本项目同样分为前台后后台部分，前台用户根据不同的权限可以获得不同的发表广告数量，使用天数等，用户数据后台代理均可显示，功能很强大。</p>
-                                <p><a class="more-link" href="#website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> Find out more</a></p>
+                                <h3 class="title"><a href="{{ route('pages', $value->id) }}">{{$value->title}}</a></h3>
+                                <p class="summary">{{$value->subDescribe}}</p>
+                                <p><a class="more-link" href="{{ route('pages', $value->id) }}" target="_blank"><i class="fa fa-external-link"></i> 查看详情</a></p>
                             </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="{{ route('pages',3) }}">08cms下的旺屋</a> <span class="label label-theme">旺屋</span></h3>
-                                <p class="summary">本网站我负责管理后台部分和增加新的页面，在这个过程当中熟悉了这个框架，这个框架当中有标记来控制网站识别页面，路由功能，结构比起微擎可以说清晰很多。</p>
-                                <p><a class="more-link" href="#website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><a href="{{ route('pages',4) }}">100好房（微擎）</a> <span class="label label-theme">微擎</span></h3>
-                                <p class="summary">在本项目当中我们采取团队协作的模式共同开发了职业经纪人应用，可以实现的功能包括，经纪人添加楼盘，经纪人详情，项目跟进，报备，经纪人薪酬，发展新的经纪人，经纪人团队等各类功能，本项目路由复杂，相对较为生疏，我负责写部分功能。</p>
-                                <p><a class="more-link" href="#website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div><!--//item-->
-                            
+                            @endforeach
+                            {{--<div class="item">--}}
+                                {{--<h3 class="title"><a href="{{ route('pages',3) }}">08cms下的旺屋</a> <span class="label label-theme">旺屋</span></h3>--}}
+                                {{--<p class="summary">本网站我负责管理后台部分和增加新的页面，在这个过程当中熟悉了这个框架，这个框架当中有标记来控制网站识别页面，路由功能，结构比起微擎可以说清晰很多。</p>--}}
+                                {{--<p><a class="more-link" href="#website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>--}}
+                            {{--</div><!--//item-->--}}
+                            {{--<div class="item">--}}
+                                {{--<h3 class="title"><a href="{{ route('pages',4) }}">100好房（微擎）</a> <span class="label label-theme">微擎</span></h3>--}}
+                                {{--<p class="summary">在本项目当中我们采取团队协作的模式共同开发了职业经纪人应用，可以实现的功能包括，经纪人添加楼盘，经纪人详情，项目跟进，报备，经纪人薪酬，发展新的经纪人，经纪人团队等各类功能，本项目路由复杂，相对较为生疏，我负责写部分功能。</p>--}}
+                                {{--<p><a class="more-link" href="#website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>--}}
+                            {{--</div><!--//item-->--}}
+
                             <a class="btn btn-cta-secondary" href="#">More on CoderWall <i class="fa fa-chevron-right"></i></a>
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </section><!--//section-->
-                
+
                 <section class="experience section">
                     <div class="section-inner">
                         <h2 class="heading">Work Experience</h2>
                         <div class="content">
-                            <div class="item">
-                                <h3 class="title">软件工程师 <span class="place"><a href="#">青岛一零二四科技有限公司</a></span> <span class="year">(2016 - 2017)</span></h3>
-                                <p>在该公司我主要负责项目开发，架构设计，开发语言为php，开发环境多变根据客户服务器不同而不同，使用框架为thinkphp和laravel，利用svn+git来实现团队协作，熟悉lanmp以及wamp的环境部署。</p>
-                            </div><!--//item-->
                             <div class="item">
                                 <h3 class="title">软件工程师 - <span class="place"><a href="#">山东拉米网络科技有限公司</a></span> <span class="year">(2017 - 2017.3)</span></h3>
                                 <p>在该公司我的工作以二次开发和服务器维护为主，二次开发的范围包括微信的微擎框架，08cms的门户框架，原生的PHP代码，laravel框架，二开的功能包括经纪人邀请码生成，身份验证，广告软件的用户分级，发布限制，以及嫁编辑器包括keditor等等
@@ -101,11 +100,19 @@
                                 </p>
                             </div><!--//item-->
 
+                            <div class="item">
+                                <h3 class="title">软件工程师 - <span class="place"><a href="#">乐偶(杭州)网络科技有限公司-贰贰网络分公司</a></span> <span class="year">(2018.5 - 至今)</span></h3>
+                                <p>
+                                    面试的时候进去的是贰贰网络，入职以后几个月，公司要分出去做一个专门的项目，就是现在的乐偶营销云，该项目是一个数字化自媒体营销的项目，公司投入了很多的人力去做，现在也已经上线，
+                                    更名为乐偶云，我在该公司参与了，官网建站部分功能，乐偶云全部功能，学习了解了相关的设计模式，设计理念，代码调优，数据库优化，主从，用户体系的构建，并用python写过几个爬虫，去获取各个自媒体的数据，
+                                    对python有了一定的了解，并自己写了12306买票脚本，对代码有了新的认识，也更多了学习了更底层的东西。
 
-                            
+                                </p>
+                            </div><!--//item-->
 
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </section><!--//section-->
 
             </div><!--//primary-->
@@ -119,10 +126,10 @@
                                 <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="#">huibo@huibo.cn</a></li>
                                 <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">http://www.ihuibo.cn</a></li>
                             </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </aside><!--//aside-->
-                
+
                 <aside class="skills aside section">
                     <div class="section-inner">
                         <h2 class="heading">Skills</h2>
@@ -131,43 +138,51 @@
                                 Intro about your skills goes here. Keep the list lean and only show your primary skillset. You can always provide a link to your Linkedin or Coderwall profile so people can get more info there.</p>
                             -->
                             <div class="skillset">
-                               
+
                                 <div class="item">
                                     <h3 class="level-title">Html<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="60%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
+                                        </div>
+                                    </div><!--//level-bar-->
                                 </div><!--//item-->
-                                
+
                                 <div class="item">
                                     <h3 class="level-title">Js &amp; jQuery<span class="level-label">Expert</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="70%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
+                                        </div>
+                                    </div><!--//level-bar-->
                                 </div><!--//item-->
-                                
+
                                 <div class="item">
                                     <h3 class="level-title">CSS<span class="level-label">Expert</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="70%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
+                                        </div>
+                                    </div><!--//level-bar-->
                                 </div><!--//item-->
-                                
+
                                 <div class="item">
                                     <h3 class="level-title">Php<span class="level-label">Pro</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="80%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
+                                        </div>
+                                    </div><!--//level-bar-->
                                 </div><!--//item-->
-                                
-                                <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p> 
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+
+                                <div class="item">
+                                    <h3 class="level-title">Python<span class="level-label">Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner" data-level="50%">
+                                        </div>
+                                    </div><!--//level-bar-->
+                                </div><!--//item-->
+
+                                <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Coderwall</a></p>
+                            </div>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </aside><!--//section-->
 
                 <!--   <aside class="testimonials aside section">
@@ -180,30 +195,30 @@
                                    </blockquote>
                                    <p class="source"><span class="name">Tim Adams</span><br /><span class="title">Curabitur commodo</span></p>
                                </div><!--//item-->
-                            
+
                         <!--    <p><a class="more-link" href="#"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
-                            
+
                         </div><!--//content-->
           <!--          </div><!--//section-inner-->
           <!--      </aside><!--//section-->
 
-                
-                <aside class="education aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> 电子信息科学与技术</h3>
-                                <h4 class="university">潍坊科技学院 <span class="year">(2013-2017)</span></h4>
-                            </div><!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> 整站建设</h3>
-                                <h4 class="university"> 兄弟连视屏 <span class="year">(2014-2016)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                            
+
+                {{--<aside class="education aside section">--}}
+                    {{--<div class="section-inner">--}}
+                        {{--<h2 class="heading">Education</h2>--}}
+                        {{--<div class="content">--}}
+                            {{--<div class="item">--}}
+                                {{--<h3 class="title"><i class="fa fa-graduation-cap"></i> 电子信息科学与技术</h3>--}}
+                                {{--<h4 class="university">潍坊科技学院 <span class="year">(2013-2017)</span></h4>--}}
+                            {{--</div><!--//item-->--}}
+                            {{--<div class="item">--}}
+                                {{--<h3 class="title"><i class="fa fa-graduation-cap"></i> 整站建设</h3>--}}
+                                {{--<h4 class="university"> 兄弟连视屏 <span class="year">(2014-2016)</span></h4>--}}
+                            {{--</div><!--//item-->--}}
+                        {{--</div><!--//content-->--}}
+                    {{--</div><!--//section-inner-->--}}
+                {{--</aside><!--//section-->--}}
+
 
 
      <!--
@@ -222,13 +237,13 @@
             <!--    </aside><!--//section-->
 
 
-                
 
-              
-            </div><!--//secondary-->    
+
+
+            </div><!--//secondary-->
         </div><!--//row-->
     </div><!--//masonry-->
-    
+
     <!-- ******FOOTER****** -->
 @section('footer')
     @extends('layout.footer')

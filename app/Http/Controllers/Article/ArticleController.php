@@ -1,13 +1,27 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Article;
 
-use App\Handlers\sendEmailHandler;
-use App\Message;
+use App\Http\Mapper\ArticleMapper;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class MessageController extends Controller
+class ArticleController extends Controller
 {
+    /**
+     * @var ArticleMapper
+     */
+    protected $mapper;
+
+    /**
+     * ArticleController constructor.
+     * @param ArticleMapper $mapper
+     */
+    public function __construct(ArticleMapper $mapper)
+    {
+        $this->mapper = $mapper;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +29,9 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $article = $this->mapper->articleList();
+
+        return view('index', compact('article'));
     }
 
     /**
@@ -34,18 +50,9 @@ class MessageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,sendEmailHandler $emailHandler)
+    public function store(Request $request)
     {
-        try {
-            Message::create($request->all());
-//            if ($res){
-//                $emailHandler->send($request->name,$request->email,$request->message);
-//            }
-            return '已收到您的留言';
-
-        } catch (\Exception $exception) {
-            die('出现错误');
-        }
+        //
     }
 
     /**
@@ -56,7 +63,12 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+        $show = $this->mapper->showArticle($id);
+
+        $list = $this->mapper->articleList()->where('title', '!=', '')->random(3)->take(3);
+
+
+        return view('projects.project', compact('show', 'list'));
     }
 
     /**
